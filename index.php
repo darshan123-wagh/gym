@@ -1,6 +1,6 @@
 
 <?php
-if (isset($_GET['c'])) {
+if (isset($_POST['c'])) {
     $SERVER = "localhost";
     $username = "root";
     $password = "";
@@ -13,8 +13,8 @@ if (isset($_GET['c'])) {
         die("Connection failed: " . mysqli_connect_error());
     }
   else{
-            $name = $_GET["name"];
-            $number = $_GET["number"];
+            $name = $_POST["name"];
+            $number = $_POST["number"];
 
             $sql = "INSERT INTO gym(name, number) VALUES ('$name', '$number')";
 
